@@ -18,6 +18,7 @@ timeVect = []
 pressVect = []
 names = []
 bars = []
+barColors = []
 pressMin = 5
 pressMax = 45
 # define r0
@@ -26,7 +27,7 @@ rCurrent = r0
 i = 0
 radiusPrevious = 0
 
-path = r'/home/bathory/PycharmProjects/Experiment/Data/8mm/'
+path = r'/home/bathory/PycharmProjects/Experiment/Data/Dat/'
 # define output file
 logPath = r'/home/bathory/PycharmProjects/Experiment/Data/log.txt'
 logFile = open(logPath, 'a')
@@ -37,55 +38,74 @@ files = []
 # r=root, d=directories, f = files
 for r, d, f in os.walk(path):
     for file in f:
-        if '.txt' in file:
+        if '.txt' in file or '.dat' in file:
             files.append(os.path.join(r, file))
 
 files.sort()
+
+
+# define function for segmenting input vectors according to min and max values. It returns min and max indexes
+def segment_vector(vector, min_value, max_value):
+    max_index = np.argmin([abs(e - max_value) for e in vector])
+    min_index = np.argmin([abs(e - min_value) for e in vector])
+    return min_index, max_index
+
 
 for filename in files:
     pressVect = []
     timeVect = []
 
-    # fill time and pressure vect
-    for line in open(filename, 'r'):
+    # if file extension is .dat
+    if filename.find('.dat') != -1:
+        print(filename)
+        for line in open(filename, 'r'):
+            pressVect.append(line)
+    else:
+        # fill time and pressure vect
+        for line in open(filename, 'r'):
 
-        index = line.find(subFreq)
-        if index != -1:
-            # read rate
-            freqRate = float(line[index + 5:]) * 1e3
+            index = line.find(subFreq)
+            if index != -1:
+                # read rate
+                freqRate = float(line[index + 5:]) * 1e3
 
-        index = line.find(subTime)
-        if index != -1:
-            # read time
-            fullTime = float(line[index + 5:])
-            # if line contains only digits
-        try:
-            tempString = [float(s) for s in line.split()]
-            # if tempString has 2 elements
-            if len(tempString) == 2:
-                pressVect.append(tempString[1])
-                timeVect.append(tempString[0])
-        except Exception:
-            continue
+            index = line.find(subTime)
+            if index != -1:
+                # read time
+                fullTime = float(line[index + 5:])
+                # if line contains only digits
+            try:
+                tempString = [float(s) for s in line.split()]
+                # if tempString has 2 elements
+                if len(tempString) == 2:
+                    pressVect.append(tempString[1])
+                    timeVect.append(tempString[0])
+            except Exception:
+                continue
 
     timeVect = [t/(timeVect[-1]/fullTime) for t in timeVect]  # eval real timeVect based on frequency
 
     # normalize timeVect to compensate radius deviation
     if filename.find('c_sh') != -1:
         rCurrent = 9.886 / 2
+        barColor = 'black'
     if filename.find('c_sm') != -1:
         rCurrent = 9.875 / 2
+        barColor = 'magenta'
     if filename.find('r_1') != -1:
         rCurrent = 10.039 / 2
+        barColor = 'blue'
     if filename.find('r_2') != -1:
         rCurrent = 10.347 / 2
+        barColor = 'green'
     if filename.find('r_3') != -1:
         rCurrent = 10.260 / 2
+        barColor = 'red'
 
     # if name of the experiment has changed, add whitespace between bars
     if radiusPrevious != rCurrent:
         bars.append(0)
-
+        barColors.append(barColor)
         # parse the filename for name of the group of experiments (for example, c_sh, c_sm)
         experimentGroupName = filename.split('/')[-1].split('.')[0].split('_')[0:2]
         names.append(experimentGroupName[0] + '_' + experimentGroupName[1])
@@ -97,16 +117,25 @@ for filename in files:
     timeVect = [t * k for t in timeVect]
 
     # making the low-pass filter
-    b, a = signal.butter(8, 0.01)
+    # b, a = signal.butter(8, 0.01)
+    b, a = signal.butter(5, 0.003, 'low')
     pressVect_flt = list(signal.filtfilt(b, a, pressVect))
 
+    # segmenting filtered vector from pressure 2 to 48
+    minIndex, maxIndex = segment_vector(pressVect_flt, 2, 48)
+    pressVect_flt = pressVect_flt[maxIndex:minIndex]
+    timeVect_flt = timeVect[maxIndex:minIndex]
+
     # eval polynomial coeffs
-    polyCoeff = polyfit(timeVect, pressVect_flt, 5)
-    pressVect_poly = polyval(timeVect, polyCoeff)
+    polyCoeff = polyfit(timeVect_flt, pressVect_flt, 5)
+    pressVect_poly = polyval(timeVect_flt, polyCoeff)
+
+    # evaluate indexes of pressure = 45 and 5
+    minIndex, maxIndex = segment_vector(pressVect_flt, pressMin, pressMax)
 
     # evaluate array of difference between filtered pressVect and pressMax|pressMin
-    maxIndex = np.argmin([abs(d - pressMax) for d in pressVect_poly])
-    minIndex = np.argmin([abs(d - pressMin) for d in pressVect_poly])
+    # maxIndex = np.argmin([abs(d - pressMax) for d in pressVect_poly])
+    # minIndex = np.argmin([abs(d - pressMin) for d in pressVect_poly])
 
     timeStart = timeVect[maxIndex]
     timeEnd = timeVect[minIndex]
@@ -114,29 +143,26 @@ for filename in files:
 
     # write expTime and name of the graph
     bars.append(expTime)
-    names.append(filename.split(r'/')[-1][0:-4])
-    # names.append(filename.split(r'/')[-1].split('.')[0].split('_')[2])
+    barColors.append(barColor)
+    # names.append(filename.split(r'/')[-1][0:-4])
+    names.append(filename.split(r'/')[-1].split('.')[0].split('_')[2])
     i += 1
     print('{0:.1f}% progress...'.format(100 * (i / len(files))), end=' ')
     logFile.write(names[-1] + ' : ' + str(expTime) + '\n')
 
-"""
-plt.figure(1)
-plt.plot(timeVect, pressVect, 'b', timeVect, pressVect_poly, 'r')
-plt.xlabel('time')
-plt.ylabel('pressure')
+logFile.close()
 
-"""
-font = {'family': 'normal', 'weight': 'bold', 'size': 12}
+font = {'family': 'normal', 'weight': 'bold', 'size': 20}
 
-plt.rcParams.update({'font.size': 9})
+plt.rcParams.update({'font.size': 14})
 plt.figure(1)
 # plt.bar(names, bars, width=0.6)
 # define space between bars
-spaceBars = np.linspace(0, 0.7 * len(bars), len(bars))
-plt.bar(spaceBars, bars, width=0.6)
+spaceBars = np.linspace(0, 0.6 * len(bars), len(bars))
+plt.bar(spaceBars, bars, width=0.6, color=barColors)
 plt.xticks(spaceBars, names)
 plt.tight_layout()
+plt.ylim([550, max(bars) + 10])
 
 i = 0
 for bar in bars:
@@ -144,7 +170,17 @@ for bar in bars:
         plt.annotate(int(bar), xy=(spaceBars[i], bar + 1))
     i += 1
 
-plt.show()
-logFile.close()
 end = time.time()
 print('evaluation time = {0:.2f} sec'.format(end - start))
+
+# plt.figure(1)
+# plt.plot(timeVect, pressVect, 'b', timeVect_flt, pressVect_poly, 'r')
+# plt.xlabel('time')
+# plt.ylabel('pressure')
+
+plt.show()
+
+
+"""
+
+"""
