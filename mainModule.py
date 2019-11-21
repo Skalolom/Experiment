@@ -27,7 +27,7 @@ rCurrent = r0
 i = 0
 radiusPrevious = 0
 
-path = r'/home/bathory/PycharmProjects/Experiment/Data/Dat/'
+path = r'/home/bathory/PycharmProjects/Experiment/Data/8mm/'
 # define output file
 logPath = r'/home/bathory/PycharmProjects/Experiment/Data/log.txt'
 logFile = open(logPath, 'a')
@@ -83,6 +83,8 @@ for filename in files:
             except Exception:
                 continue
 
+    # if max(pressureVect) is above 60, we need to calibrate its values
+
     timeVect = [t/(timeVect[-1]/fullTime) for t in timeVect]  # eval real timeVect based on frequency
 
     # normalize timeVect to compensate radius deviation
@@ -120,6 +122,9 @@ for filename in files:
     # b, a = signal.butter(8, 0.01)
     b, a = signal.butter(5, 0.003, 'low')
     pressVect_flt = list(signal.filtfilt(b, a, pressVect))
+    # save current values of pressureMax and pressureMin for calibration
+    calibrationPressMax = max(pressVect_flt)
+    calibrationPressMin = min(pressVect_flt)
 
     # segmenting filtered vector from pressure 2 to 48
     minIndex, maxIndex = segment_vector(pressVect_flt, 2, 48)
@@ -154,7 +159,7 @@ logFile.close()
 
 font = {'family': 'normal', 'weight': 'bold', 'size': 20}
 
-plt.rcParams.update({'font.size': 14})
+plt.rcParams.update({'font.size': 22})
 plt.figure(1)
 # plt.bar(names, bars, width=0.6)
 # define space between bars
