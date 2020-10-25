@@ -193,3 +193,52 @@ dmp : 611.3535261444136
 dmp : 625.9210930030964
 flt : 620.4674542643248
 sph : 625.7335895891857
+5mm
+5mm
+5mm
+5mm
+5mm
+5mm
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+dmp : 596.1654919332915
+flt : 631.3801857646149
+sph : 556.2386098488308
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+spiral
+Data
+Data
+Data
+Data

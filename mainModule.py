@@ -5,6 +5,10 @@ from numpy.polynomial.polynomial import polyval
 import time
 import os
 from scipy import signal
+import os
+from scipy.fft import fft
+from scipy.signal import savgol_filter
+dn = os.path.dirname(os.path.realpath(__file__))
 
 start = time.time()
 # read lines in file and search for 'kHz' in line
@@ -27,9 +31,11 @@ rCurrent = r0
 i = 0
 radiusPrevious = 0
 
-path = r'/home/bathory/PycharmProjects/Experiment/Data/8mm/'
+#path = r'/home/bathory/PycharmProjects/Experiment/Data/spiral/5mm/'
+path = r'Data/5mm'
 # define output file
-logPath = r'/home/bathory/PycharmProjects/Experiment/Data/log.txt'
+#logPath = r'/home/bathory/PycharmProjects/Experiment/Data/log.txt'
+logPath = r'Data/log.txt'
 logFile = open(logPath, 'a')
 # write type of experiment
 logFile.write(path.split(r'/')[-2] + '\n')
@@ -120,20 +126,22 @@ for filename in files:
 
     # making the low-pass filter
     # b, a = signal.butter(8, 0.01)
-    b, a = signal.butter(5, 0.003, 'low')
+    b, a = signal.butter(5, 0.001)
     pressVect_flt = list(signal.filtfilt(b, a, pressVect))
+    pressVect_flt = savgol_filter(pressVect_flt,
+                                  2501, 5)
     # save current values of pressureMax and pressureMin for calibration
     calibrationPressMax = max(pressVect_flt)
     calibrationPressMin = min(pressVect_flt)
 
     # segmenting filtered vector from pressure 2 to 48
-    minIndex, maxIndex = segment_vector(pressVect_flt, 2, 48)
+    minIndex, maxIndex = segment_vector(pressVect_flt, pressMin, pressMax)
     pressVect_flt = pressVect_flt[maxIndex:minIndex]
     timeVect_flt = timeVect[maxIndex:minIndex]
 
     # eval polynomial coeffs
-    polyCoeff = polyfit(timeVect_flt, pressVect_flt, 5)
-    pressVect_poly = polyval(timeVect_flt, polyCoeff)
+    #polyCoeff = polyfit(timeVect_flt, pressVect_flt, 5)
+    #pressVect_poly = polyval(timeVect_flt, polyCoeff)
 
     # evaluate indexes of pressure = 45 and 5
     minIndex, maxIndex = segment_vector(pressVect_flt, pressMin, pressMax)
@@ -153,7 +161,13 @@ for filename in files:
     names.append(filename.split(r'/')[-1].split('.')[0].split('_')[2])
     i += 1
     print('{0:.1f}% progress...'.format(100 * (i / len(files))), end=' ')
-    logFile.write(names[-1] + ' : ' + str(expTime) + '\n')
+    # logFile.write(names[-1] + ' : ' + str(expTime) + '\n')
+
+    # # вычисляем спектр сигнала
+    # plt.figure(i)
+    # plt.title('Raw signal')
+    # plt.plot(timeVect, pressVect, 'b', timeVect_flt, pressVect_flt, 'r')
+
 
 logFile.close()
 
@@ -184,7 +198,6 @@ print('evaluation time = {0:.2f} sec'.format(end - start))
 # plt.ylabel('pressure')
 
 plt.show()
-
 
 """
 
