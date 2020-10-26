@@ -9,14 +9,14 @@ Input Rate In kHz: 0.090144
 Input Time In Sec: 757.541547
 Decimation: 1
 Data Format: Calibr
-Time markers scale: ������������
+Time markers scale: ìèëëèñåêóíäû
 GPS time=00:00:00 00-00-0000
 GPS latitude=, latitude h=0
 GPS longitude=, longitude h=0
 Segments: 1
 Data as Time Sequence:
-                    Ch  1
-                 ����� 1
+                    Ch  1  
+                 Êàíàë 1   
 
             0       -118.0
            11         59.9
