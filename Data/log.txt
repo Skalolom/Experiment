@@ -1,348 +1,66 @@
 5mm
-dmp : 621.6750733582554
-flt : 538.6089438921246
-sph : 599.7863197236429
-dmp : 597.2875689069451
-flt : 690.8231721228872
-sph : 691.6780115790099
 5mm
-dmp : 621.6750733582554
-flt : 538.6089438921246
-sph : 599.7863197236429
-dmp : 597.2875689069451
-flt : 690.8231721228872
-sph : 691.6780115790099
 5mm
-dmp : 621.6750733582554
-flt : 538.6089438921246
-sph : 599.7863197236429
-dmp : 597.2875689069451
-flt : 690.8231721228872
-sph : 691.6780115790099
 5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-dmp : 596.1654919332915
-flt : 631.3801857646149
-sph : 556.2386098488308
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-spiral
-Data
-Data
-Data
-Data
-Data
-Data
-Data
-Data
-Data
-Data
-Data
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
-5mm
+dmp : 63.07699646820564
+dmpJ : 68.49663359385599
+flt : 63.66104273180014
+fltJ : 42.15177451929599
+sph : 63.07123510457749
+sphJ : 68.49663359385599
+dmp : 63.65157303668065
+dmpJ : 68.38452781055999
+flt : 63.684848882157645
+fltJ : 68.49663359385599
+sph : 63.67054571564847
+sphJ : 68.33255824214463
+dmp : 58.40462635944966
+dmpJ : 60.62060600995403
+flt : 58.40462635944966
+fltJ : 63.06854389297548
+sph : 57.82058009585516
+sphJ : 60.44803229112794
+dmp : 70.68518319774068
+dmpJ : 61.58093939119691
+flt : 55.83535479485398
+fltJ : 52.88015384037972
+sph : 71.27917633385616
+sphJ : 58.903507243753566
+dmp : 56.06844130507167
+dmpJ : 60.501088978066285
+flt : 56.06844130507167
+fltJ : 60.47597437076945
+sph : 56.06844130507167
+sphJ : 65.81382622808275
+5mm
+5mm
+dmp : 63.07699646820564
+dmpJ : 68.49663359385599
+flt : 63.66104273180014
+fltJ : 42.15177451929599
+sph : 63.07123510457749
+sphJ : 68.49663359385599
+dmp : 63.65157303668065
+dmpJ : 68.38452781055999
+flt : 63.684848882157645
+fltJ : 68.49663359385599
+sph : 63.67054571564847
+sphJ : 68.33255824214463
+dmp : 58.40462635944966
+dmpJ : 60.62060600995403
+flt : 58.40462635944966
+fltJ : 63.06854389297548
+sph : 57.82058009585516
+sphJ : 60.44803229112794
+dmp : 70.68518319774068
+dmpJ : 61.58093939119691
+flt : 55.83535479485398
+fltJ : 52.88015384037972
+sph : 71.27917633385616
+sphJ : 58.903507243753566
+dmp : 56.06844130507167
+dmpJ : 60.501088978066285
+flt : 56.06844130507167
+fltJ : 60.47597437076945
+sph : 56.06844130507167
+sphJ : 65.81382622808275
