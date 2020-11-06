@@ -8,6 +8,8 @@ from scipy.fft import fft
 from scipy.signal import savgol_filter, decimate
 from scipy.ndimage import gaussian_filter1d
 from signal_processing import SignalProcessing
+import json
+import os
 
 start = time.time()
 # read lines in file and search for 'kHz' in line
@@ -22,10 +24,18 @@ log_file = open(log_path, 'a')
 experiment_name = path.split(r'/')[-1] + '\n'
 log_file.write(experiment_name)
 
-signal_processor = SignalProcessing(path)
+files, path, log_path = [], path, log_path
+# считаем конфигурационный файл config.json в аттрибут класса config_data
+with open('config.json', 'r') as read_json:
+    config_data = json.load(read_json)
 
+# r=root, d=directories, f = files
+for r, d, f in os.walk(path):
+    for file in f:
+        if '.txt' in file or '.dat' in file:
+            files.append(os.path.join(r, file))
 
-for filename in signal_processor.files:
+for filename in files:
     press_vector = []
     time_vector = []
 
@@ -125,10 +135,10 @@ for filename in signal_processor.files:
     expTime = timeEnd - timeStart
 
     # вычисляем расход
-    dt, dh = np.abs(np.diff(time_vector_flt)), np.abs(np.diff(press_vector_flt))
-    dt = np.append(dt, dt[-1])
-    dh = np.append(dh, dh[-1])
-    consumption = (np.pi*(10e-2*r_0)**2) * (dh/dt)
+    # dt, dh = np.abs(np.diff(time_vector_flt)), np.abs(np.diff(press_vector_flt))
+    # dt = np.append(dt, dt[-1])
+    # dh = np.append(dh, dh[-1])
+    # consumption = (np.pi*(10e-2*r_0)**2) * (dh/dt)
 
     # write expTime and name of the graph
     bars.append(expTime)
@@ -137,20 +147,20 @@ for filename in signal_processor.files:
     current_name = filename.split(r'/')[-1].split('.')[0].split('_')[2]
     names.append(current_name)
     i += 1
-    print('{0:.1f}% progress...'.format(100 * (i / len(signal_processor.files))), end=' ')
+    print('{0:.1f}% progress...'.format(100 * (i / len(files))), end=' ')
     log_file.write(names[-1] + ' : ' + str(expTime) + '\n')
     figure_label = filename.split('/')[-1].split('.')[0]
     # вычисляем спектр сигнала
-    # plt.figure(i)
-    # plt.title(figure_label)
-    # plt.plot(time_vector, press_vector, 'b', time_vector_flt, press_vector_flt, 'r')
+    plt.figure(i)
+    plt.title(figure_label)
+    plt.plot(time_vector, press_vector, 'b', time_vector_flt, press_vector_flt, 'r')
 
     # выводим на одном графике зависимости p(t)
     # plt.plot(time_vector_flt, press_vector_flt, bar_color,
     #          label=figure_label)
 
     # выводим расход от времени
-    plt.plot(press_vector_flt, consumption, bar_color, label=figure_label)
+    #plt.plot(press_vector_flt, consumption, bar_color, label=figure_label)
 
 
 log_file.close()
