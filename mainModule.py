@@ -7,14 +7,17 @@ from scipy import signal
 from scipy.fft import fft
 from scipy.signal import savgol_filter, decimate
 from scipy.ndimage import gaussian_filter1d
-from signal_processing import SignalProcessing
+import signal_processing as sp
 import json
 import os
 
 start = time.time()
 # read lines in file and search for 'kHz' in line
 sub_freq, sub_time, index, freq_rate, full_time = 'kHz', 'Sec', 0, 1, 1
-time_vector = press_vector = names = bars = bar_colors = []
+time_vector = press_vector = []
+bar_colors = []
+bars = []
+names = []
 press_min, press_max = 5, 45
 r_0, r_current, i, r_previous = 5, 5, 0, 0
 
@@ -34,6 +37,8 @@ for r, d, f in os.walk(path):
     for file in f:
         if '.txt' in file or '.dat' in file:
             files.append(os.path.join(r, file))
+
+files.sort()
 
 for filename in files:
     press_vector = []
@@ -94,7 +99,7 @@ for filename in files:
             bar_color = 'purple'
         else:
             bar_color = 'green'
-    else:
+    if filename.find('r_3') != -1:
         r_current = 10.260 / 2
         if filename.find('J') != -1:
             bar_color = 'purple'
@@ -115,35 +120,26 @@ for filename in files:
     # time_vector = [t / 1000 for t in time_vector]
     time_vector = [t * k for t in time_vector]
 
-    press_vector_flt = decimate(press_vector, 50)
-    time_vector_flt = np.linspace(0, time_vector[-1], len(press_vector_flt))
-    sos = signal.butter(15, 0.05, output='sos')
-    press_vector_flt = signal.sosfiltfilt(sos, press_vector_flt, padtype='constant')
-    press_vector_flt = decimate(press_vector_flt, 11)
-    #press_vector_flt = signal.detrend(press_vector_flt, type='constant')
-    #press_vector_flt = gaussian_filter1d(press_vector_flt, 4)
-    press_vector_flt = savgol_filter(press_vector_flt, 51, 4, mode='nearest')
+    time_vector_flt, press_vector_flt = sp.approximate_pressure_with_polynomial(time_vector=time_vector,
+                                                                                pressure_vector=press_vector,
+                                                                                filter_window_factor=50,
+                                                                                polynomial_degree=2,
+                                                                                pressure_min=press_min,
+                                                                                pressure_max=press_max)
 
-    # segmenting filtered vector from pressure press_min to press_max
-    minIndex, maxIndex = SignalProcessing.segment_vector(press_vector_flt, press_min, press_max)
-    press_vector_flt = press_vector_flt[maxIndex:minIndex]
-    time_vector_flt = time_vector_flt[maxIndex:minIndex]
-
-    #time_vector_flt = time_vector_flt - time_vector_flt[0]
     timeStart = time_vector_flt[0]
     timeEnd = time_vector_flt[-1]
     expTime = timeEnd - timeStart
 
     # вычисляем расход
-    # dt, dh = np.abs(np.diff(time_vector_flt)), np.abs(np.diff(press_vector_flt))
-    # dt = np.append(dt, dt[-1])
-    # dh = np.append(dh, dh[-1])
-    # consumption = (np.pi*(10e-2*r_0)**2) * (dh/dt)
+    dt, dh = np.abs(np.diff(time_vector_flt)), np.abs(np.diff(press_vector_flt))
+    dt = np.append(dt, dt[-1])
+    dh = np.append(dh, dh[-1])
+    consumption = (np.pi*(10e-2*r_current)**2) * (dh/dt)
 
     # write expTime and name of the graph
     bars.append(expTime)
     bar_colors.append(bar_color)
-    # names.append(filename.split(r'/')[-1][0:-4])
     current_name = filename.split(r'/')[-1].split('.')[0].split('_')[2]
     names.append(current_name)
     i += 1
@@ -151,16 +147,18 @@ for filename in files:
     log_file.write(names[-1] + ' : ' + str(expTime) + '\n')
     figure_label = filename.split('/')[-1].split('.')[0]
     # вычисляем спектр сигнала
-    plt.figure(i)
-    plt.title(figure_label)
-    plt.plot(time_vector, press_vector, 'b', time_vector_flt, press_vector_flt, 'r')
+    # plt.figure(i)
+    # plt.title(figure_label)
+    # plt.plot(time_vector, press_vector, 'b', time_vector_flt, press_vector_flt, 'r')
 
     # выводим на одном графике зависимости p(t)
     # plt.plot(time_vector_flt, press_vector_flt, bar_color,
     #          label=figure_label)
 
     # выводим расход от времени
-    #plt.plot(press_vector_flt, consumption, bar_color, label=figure_label)
+    plt.plot(press_vector_flt, consumption, bar_color, label=figure_label)
+    plt.xlabel('pressure, sm h2o')
+    plt.ylabel('c, m3/sec')
 
 
 log_file.close()

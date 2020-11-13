@@ -2,17 +2,20 @@ import os
 import numpy as np
 import json
 import matplotlib.pyplot as plt
-from scipy import signal
+from scipy import signal, ndimage
+import time
 
 # define constant string for searching in text files
 FREQUENCY_SUBSTRING = 'kHz'
 TIME_SUBSTRING = 'Sec'
 MAXIMUM_LOSS_IN_PASS_BAND = 1e-1
 MINIMUM_ATTENUATION_IN_STOP_BAND = 40
+# ratio between number of samples in pressure vector and median filter window size (e.g. window size calculated
+# as len(pressure_vector)//ratio
+FACTOR_PRESSURE_TO_WINDOW = 30
 
 
 def get_text_files_from_directory(directory_path: str) -> list:
-
     """
     This function returns list of text files in directory 'path'
 
@@ -61,9 +64,7 @@ def get_pressure_and_time_from_text_file(text_file_path):
     """
 
     # time and pressure vectors
-    pressure_vector = time_vector = np.array([])
-    # duration of experiment and working frequency of pressure sensor
-    experiment_duration, sensor_frequency = 0, 0
+    pressure_vector, time_vector = np.array([]), np.array([])
 
     with open(text_file_path, 'r') as text_file:
         for line in text_file:
@@ -92,11 +93,11 @@ def get_signal_frequency(time_vector, pressure_vector):
     """
 
     # evaluate sampling frequency (number of sample per second)
-    sampling_frequency = (len(time_vector)/time_vector[-1])*1e3
+    sampling_frequency = (len(time_vector) / time_vector[-1]) * 1e3
     # evaluate Nyquist frequency accordingly (1/2 of sampling_frequency)
-    nyquist_frequency = 0.5*sampling_frequency
+    nyquist_frequency = 0.5 * sampling_frequency
     # now evaluate window function
-    window = signal.get_window('blackmanharris', Nx=2**11)
+    window = signal.get_window('blackmanharris', Nx=2 ** 11)
     # evaluate power spectral density
     sampling_frequencies, power_spectral_density = signal.welch(
         x=pressure_vector, fs=sampling_frequency
@@ -118,7 +119,8 @@ def get_signal_frequency(time_vector, pressure_vector):
     return signal_frequency
 
 
-def filter_pressure_vector(time_vector, pressure_vector):
+def filter_pressure_vector(time_vector, pressure_vector, width_of_convolve_window,
+                           number_of_convolution):
     """
 
     This function filters pressure vector and returns smoothed vector of pressure without
@@ -128,75 +130,166 @@ def filter_pressure_vector(time_vector, pressure_vector):
 
     :param pressure_vector: vector of pressure values from the sensor
 
+    :param width_of_convolve_window: number of elements in window function vector
+
+    :param num_of_convolution: number of consecutive convolutions
+
     :return: pressure_vector_filtered: vector of filtered values of pressure
     """
     # evaluate filter design using signal_frequency
     # evaluate sampling frequency (number of sample per second)
-    sampling_frequency = (len(time_vector)/time_vector[-1])*1e3
-    # evaluate optimal filter parameters
-    pass_stop = 0.2
-    pass_band = 0.5*pass_stop
-    minimal_butter_order, butterworth_natural_frequency = signal.buttord(
-        wp=pass_band, ws=pass_stop,
-        gpass=MAXIMUM_LOSS_IN_PASS_BAND, gstop=MINIMUM_ATTENUATION_IN_STOP_BAND,
-        fs=sampling_frequency, analog=False
-    )
+    sampling_frequency = (len(time_vector) / time_vector[-1]) * 1e3
 
-    # # filter signal
-    # second_order_section = signal.butter(N=minimal_butter_order, Wn=butterworth_natural_frequency,
-    #                                      analog=False, output='sos', fs=sampling_frequency)
+    # this fragment smooths pressure_vector by convolving it with window window_vector
+
+    # cut slices (5%) from left and right sides of the pressure_vector
+    # number_of_erased_elements = len(pressure_vector)//10
+    # pressure_vector = pressure_vector[number_of_erased_elements-1:-number_of_erased_elements]
+    # time_vector = time_vector[number_of_erased_elements-1:-number_of_erased_elements]
+
+    # define vector of window function elements
+    #window_vector = signal.windows.blackmanharris(width_of_convolve_window)
+    window_vector = signal.windows.flattop(width_of_convolve_window, sym=False)
+    #window_vector = signal.windows.gaussian(width_of_convolve_window, std=17.0, sym=False)
+
+    pressure_vector_filtered = signal.decimate(x=pressure_vector, q=11)
+    pressure_vector_filtered = signal.decimate(x=pressure_vector_filtered, q=11)
+    pressure_vector_filtered = signal.decimate(x=pressure_vector_filtered, q=5)
+    #time_vector = np.linspace(time_vector[0], time_vector[-1], len(pressure_vector))
+
+    """
+    add reflected copy from the beginning of pressure_vector to the left side of new filtered pressure vector (length
+    of additive vector is equal to width_of_convolve window) and reflected copy of the pressure_vector ending to the 
+    right side of the new filtered pressure vector to prevent convolve errors at sides of pressure vector
+    """
+    # # calculate left side of the pressure_vector_filtered
+    # pressure_vector_filtered = np.append(pressure_vector[width_of_convolve_window-1::-1],
+    #                                      pressure_vector)
+    # # calculate right side of the pressure_vector_filtered
+    # pressure_vector_filtered = np.append(pressure_vector_filtered,
+    #                                      pressure_vector[-1:-width_of_convolve_window-1:-1])
     #
-    # # apply filter to pressure_vector
-    # pressure_vector_filtered = signal.sosfiltfilt(sos=second_order_section, x=pressure_vector)
+    # # now convolve pressure_vector_filtered with values of calculated window function
+    # for i in range(number_of_convolution):
+    #     pressure_vector_filtered = signal.oaconvolve(pressure_vector_filtered, window_vector/window_vector.sum(),
+    #                                                  mode='valid')
+    #
+    # # calculate number of elements, that needs to be erased at both sides of pressure_vector_filtered
+    # # first we evaluate difference between length of pressure_vector and pressure_vector_filtered
+    # length_difference = np.abs(len(pressure_vector_filtered) - len(pressure_vector))
+    # # now we evaluate number of erased elements as integer half of length_difference
+    # number_of_erased_elements = length_difference//2
+    # # now we evaluate resulting vector
+    # pressure_vector_filtered = pressure_vector_filtered[number_of_erased_elements:-number_of_erased_elements]
 
-    pressure_vector_filtered = signal.savgol_filter(x=pressure_vector, window_length=333, polyorder=5,
-                                                    mode='nearest')
-
+    # # apply this window vector to initial signal (pressure_vector) number_of_convolution times
+    # for i in range(number_of_convolution):
+    #     pressure_vector_filtered = signal.convolve(pressure_vector_filtered, window_vector / window_vector.sum(),
+    #                                                mode='valid')
+    # pressure_vector_filtered = pressure_vector_filtered[width_of_convolve_window-1:]
+    # length of pressure_vector_filtered due to filter operations differs from time_vector length.
+    # so we create new object, time_vector_filtered with equal length
+    time_vector_filtered = np.linspace(start=time_vector[0], stop=time_vector[-1],
+                                       num=len(pressure_vector_filtered))
     plt.figure(2)
     plt.plot(time_vector, pressure_vector, 'b',
-             time_vector, pressure_vector_filtered, 'r')
+             time_vector_filtered, pressure_vector_filtered, 'r')
     plt.ylim([-100, 100])
     plt.show()
 
     return pressure_vector_filtered
-    
 
-def approximate_pressure_with_polynomial(time_vector, pressure_vector, pressure_vector_filtered):
+
+def downsample_pressure_vector(pressure_vector, downsampling_factor, number_of_decimations):
+
     """
+    This function calculates consecutive decimations of input pressure. Number of decimations given by the value
+    of parameter number_of_decimations
 
+    :param pressure_vector: input pressure vector
+    :param downsampling_factor: downsampling factor
+    :param number_of_decimations: number of consecutive decimations
+    :return: downsampled_signal: input signal affected by consecutive decimations
+    """
+    pressure_vector_downsampled = pressure_vector
+    for i in range(number_of_decimations):
+        pressure_vector_downsampled = signal.decimate(x=pressure_vector_downsampled,
+                                                      q=downsampling_factor)
+    return pressure_vector_downsampled
+
+
+def segment_vector(vector, min_value, max_value):
+    max_index = np.argmin([abs(e - max_value) for e in vector])
+    min_index = np.argmin([abs(e - min_value) for e in vector])
+    return min_index, max_index
+
+
+def approximate_pressure_with_polynomial(time_vector, pressure_vector, filter_window_factor, polynomial_degree,
+                                         pressure_min, pressure_max):
+    """
+    This function applies median filter to input pressure vector and then approximates filtered pressure vector
+    with polynomial of order polynomial_order
+
+    :param polynomial_degree: degree of approximation polynomial
+    :param pressure_min: minimal value of pressure
+    :param pressure_max: maximal value of pressure
     :param time_vector: vector of time stamps
     :param pressure_vector: vector of pressure values
-    :param pressure_vector_filtered: vector of filtered values of pressure
+    :param filter_window_factor: length of pressure_vector//size in elements of median filter
 
-    :return: approximated polynomial
+    :return: time_vector_filtered: vector of time stamps relative to input pressure max and pressure min
+    :return: polynomial_pressure_vector: approximated polynomial
     """
 
     r_0 = 5.0
+    # apply median filter to input pressure vector
+    pressure_vector_filtered = ndimage.median_filter(pressure_vector,
+                                                     size=len(pressure_vector)//filter_window_factor)
+
+    # segment pressure_vector according to values pressure_min and pressure_max
+    min_index, max_index = segment_vector(pressure_vector_filtered, pressure_min, pressure_max)
+    pressure_vector_filtered = pressure_vector_filtered[max_index:min_index]
+    time_vector_filtered = time_vector[max_index:min_index]
     # calculate polynomial coefficients
-    polynomial_coefficients = np.polyfit(time_vector, pressure_vector_filtered, 2)
-    # construct polynomial according to this coeffs
+    polynomial_coefficients = np.polyfit(x=time_vector_filtered, y=pressure_vector_filtered, deg=polynomial_degree)
+    # construct polynomial according to this coefficients
     polynomial_pressure_function = np.poly1d(polynomial_coefficients)
-    polynomial_pressure_vector = polynomial_pressure_function(time_vector)
-    
-    # вычисляем расход
-    dt, dh = np.abs(np.diff(time_vector)), np.abs(np.diff(polynomial_pressure_vector))
-    dt = np.append(dt, dt[-1])
-    dh = np.append(dh, dh[-1])
-    consumption = (np.pi*(10e-2*r_0)**2) * (dh/dt)
+    polynomial_pressure_vector = polynomial_pressure_function(time_vector_filtered)
 
-    plt.figure(3)
-    plt.plot(polynomial_pressure_vector, consumption)
-    plt.show()
-
+    return time_vector_filtered, pressure_vector_filtered, polynomial_pressure_vector
 
 
 def test_function():
-    time_vector, pressure_vector = get_pressure_and_time_from_text_file(r'Data/5mm/c_sh_dmpJ.txt')
-    pressure_vector_filtered = filter_pressure_vector(time_vector=time_vector,
-                                                      pressure_vector=pressure_vector)
-    approximate_pressure_with_polynomial(time_vector=time_vector,
-                                         pressure_vector=pressure_vector,
-                                         pressure_vector_filtered=pressure_vector_filtered)
+    i = 0
+    start_time = time.time()
+    time_vector, pressure_vector = get_pressure_and_time_from_text_file(r'Data/Spiral/5mm/r_2_fltJ.txt')
+    time_vector_filtered, pressure_vector_filtered, polynomial_pressure_vector = approximate_pressure_with_polynomial(
+        time_vector=time_vector, pressure_vector=pressure_vector,
+        filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2,
+        pressure_min=5, pressure_max=45)
+    plt.figure(1)
+    plt.rcParams.update({'font.size': 22})
+    plt.plot(1e-3*time_vector, pressure_vector, 'b', 1e-3*time_vector_filtered, pressure_vector_filtered, 'r',
+             1e-3*time_vector_filtered, polynomial_pressure_vector, 'k')
+    plt.ylabel('pressure, sm. H2O')
+    plt.xlabel('time, sec')
+    plt.grid()
+    plt.show()
+
+    # time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
+    #     time_vector=time_vector, pressure_vector=pressure_vector,
+    #     filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2,
+    #     pressure_min=5, pressure_max=45)
+    # for directory in get_directories_from_root(r'Data/Spiral'):
+    #     for file in get_text_files_from_directory(directory):
+    #         time_vector, pressure_vector = get_pressure_and_time_from_text_file(file)
+    #         time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
+    #             time_vector=time_vector, pressure_vector=pressure_vector,
+    #             filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2, pressure_min=5, pressure_max=45)
+    #         print('#', sep='', end='')
+    #         i += 1
+    finish_time = time.time()
+    print('\nfull time -> {0:.1f} seconds'.format(finish_time - start_time))
 
 
 class SignalProcessing:
