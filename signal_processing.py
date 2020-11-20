@@ -4,6 +4,7 @@ import json
 import matplotlib.pyplot as plt
 from scipy import signal, ndimage
 import time
+import pandas as pd
 
 # define constant string for searching in text files
 FREQUENCY_SUBSTRING = 'kHz'
@@ -12,7 +13,7 @@ MAXIMUM_LOSS_IN_PASS_BAND = 1e-1
 MINIMUM_ATTENUATION_IN_STOP_BAND = 40
 # ratio between number of samples in pressure vector and median filter window size (e.g. window size calculated
 # as len(pressure_vector)//ratio
-FACTOR_PRESSURE_TO_WINDOW = 30
+FACTOR_PRESSURE_TO_WINDOW = 500
 
 
 def get_text_files_from_directory(directory_path: str) -> list:
@@ -52,32 +53,51 @@ def get_directories_from_root(root_path: str) -> list:
     return directories_list
 
 
-def get_pressure_and_time_from_text_file(text_file_path):
+def get_pressure_and_time_from_text_file(text_file_path, number_of_info_rows):
     """
 
     This function returns vectors of pressure and time values from text file text_file_path
 
     :param text_file_path: path to text file with results of experiment
+    :param number_of_info_rows: number of information string in th file
 
     :return: data_from_file (pressure_vector, time_vector) - tuple of time and pressure vectors
 
     """
 
-    # time and pressure vectors
-    pressure_vector, time_vector = np.array([]), np.array([])
-
+    # here we read text file from 21th row (where information part ends). Then we call columns 't' for time samples
+    # and 'p' for pressure samples respectively. Finally, we write vectors of time and pressure to np.ndarrays.
     with open(text_file_path, 'r') as text_file:
-        for line in text_file:
-            # if line consists of only 2 elements (which means that first is time stamp, and second is
-            # pressure value)
-            try:
-                elements_in_current_line = [float(string) for string in line.split()]
-            except ValueError:
-                continue
-            else:
-                if len(elements_in_current_line) == 2:
-                    time_vector = np.append(time_vector, float(elements_in_current_line[0]))
-                    pressure_vector = np.append(pressure_vector, float(elements_in_current_line[1]))
+        df = pd.read_csv(text_file_path, skiprows=number_of_info_rows, header=None, names=['t', 'p'],
+                         delim_whitespace=True)
+    pressure_vector = df['p'].to_numpy()
+    time_vector = df['t'].to_numpy()
+
+    # now we cover the case when time_vector given in seconds instead of ms
+    if max(time_vector) >= 1e4:
+        time_vector = time_vector*1e-3
+
+    # now we make amendments according to radius deviations in different geometries
+    # first we deserialize config.json
+    with open('config.json', 'r') as json_file:
+        config_dict = json.load(json_file)
+    # normalize time_vector to compensate radius deviation
+    radius_dict = config_dict['radius']
+    r_0 = radius_dict['r_0']
+    r_current = r_0
+    if 'c_sh' in text_file_path:
+        r_current = radius_dict['r_sh']
+    if 'c_sm' in text_file_path:
+        r_current = radius_dict['r_sm']
+    if 'r_1' in text_file_path:
+        r_current = radius_dict['r_1']
+    if 'r_2' in text_file_path:
+        r_current = radius_dict['r_2']
+    if 'r_3' in text_file_path:
+        r_current = radius_dict['r_3']
+
+    k = r_current ** 2 / r_0 ** 2
+    time_vector = k*time_vector
 
     return time_vector, pressure_vector
 
@@ -241,7 +261,6 @@ def approximate_pressure_with_polynomial(time_vector, pressure_vector, filter_wi
     :return: polynomial_pressure_vector: approximated polynomial
     """
 
-    r_0 = 5.0
     # apply median filter to input pressure vector
     pressure_vector_filtered = ndimage.median_filter(pressure_vector,
                                                      size=len(pressure_vector)//filter_window_factor)
@@ -253,43 +272,81 @@ def approximate_pressure_with_polynomial(time_vector, pressure_vector, filter_wi
     # calculate polynomial coefficients
     polynomial_coefficients = np.polyfit(x=time_vector_filtered, y=pressure_vector_filtered, deg=polynomial_degree)
     # construct polynomial according to this coefficients
-    polynomial_pressure_function = np.poly1d(polynomial_coefficients)
-    polynomial_pressure_vector = polynomial_pressure_function(time_vector_filtered)
+    pressure_vector_filtered = np.polyval(polynomial_coefficients, time_vector_filtered)
 
-    return time_vector_filtered, pressure_vector_filtered, polynomial_pressure_vector
+    return time_vector_filtered, pressure_vector_filtered
+
+
+def calculate_consumption_ratio(time_vector, pressure_vector, radius_of_barrel, radius_of_hole):
+    """
+
+    that function evaluates consumption ration mu for emptying the barrel with constant radius (radius_of_barrel)
+    through the hole with radius = radius_of_hole
+
+    :param time_vector: vector of timestamps
+    :param pressure_vector: vector of liquid height values
+    :param radius_of_barrel: radius of the cross-section of emptied barrel
+    :param radius_of_hole: radius of the cross-section of the hole, that empties the barrel
+    :return: mu: consumption ration according to given parameters
+    """
+
+    # here we evaluate consumption ratio assuming that velocity in the hole is equal to sqrt(2gh)
+    # here we calculate cross-section of the barrel
+    s_barrel = np.pi*(radius_of_barrel**2)
+    # here we calculate cross-section of the hole
+    s_hole = np.pi*(radius_of_hole**2)
+    h_c = 0.12
+    h1, h2 = max(pressure_vector), min(pressure_vector)
+
+    # here we calculate full experimental time, that needed to empty the barrel
+    time_experimental = max(time_vector) - min(time_vector)
+    time_ideal = (2*s_barrel*(np.sqrt(h1+h_c) - np.sqrt(h2+h_c)))/(s_hole*np.sqrt(2*9.8))
+    mu = (2*s_barrel*(np.sqrt(h1+h_c) - np.sqrt(h2+h_c)))/(time_experimental*s_hole*np.sqrt(2*9.8))
+
+    return mu
 
 
 def test_function():
     i = 0
     start_time = time.time()
-    time_vector, pressure_vector = get_pressure_and_time_from_text_file(r'Data/Spiral/5mm/r_2_fltJ.txt')
-    time_vector_filtered, pressure_vector_filtered, polynomial_pressure_vector = approximate_pressure_with_polynomial(
-        time_vector=time_vector, pressure_vector=pressure_vector,
-        filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2,
-        pressure_min=5, pressure_max=45)
-    plt.figure(1)
-    plt.rcParams.update({'font.size': 22})
-    plt.plot(1e-3*time_vector, pressure_vector, 'b', 1e-3*time_vector_filtered, pressure_vector_filtered, 'r',
-             1e-3*time_vector_filtered, polynomial_pressure_vector, 'k')
-    plt.ylabel('pressure, sm. H2O')
-    plt.xlabel('time, sec')
-    plt.grid()
-    plt.show()
-
+    mu_dict = {}
+    # time_vector, pressure_vector = get_pressure_and_time_from_text_file(r'Data/Spiral/5mm/c_sh_flt.txt', 20)
     # time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
     #     time_vector=time_vector, pressure_vector=pressure_vector,
     #     filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2,
     #     pressure_min=5, pressure_max=45)
-    # for directory in get_directories_from_root(r'Data/Spiral'):
-    #     for file in get_text_files_from_directory(directory):
-    #         time_vector, pressure_vector = get_pressure_and_time_from_text_file(file)
-    #         time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
-    #             time_vector=time_vector, pressure_vector=pressure_vector,
-    #             filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2, pressure_min=5, pressure_max=45)
-    #         print('#', sep='', end='')
-    #         i += 1
+    # mu = calculate_consumption_ratio(time_vector=time_vector_filtered, pressure_vector=1e-2*pressure_vector_filtered,
+    #                                  radius_of_barrel=3e-1, radius_of_hole=5e-3)
+    for directory in get_directories_from_root(r'Data/Spiral'):
+        geometry_name = directory.split('/')[-1]
+        mu_dict[geometry_name] = {}
+        for file in get_text_files_from_directory(directory):
+            time_vector, pressure_vector = get_pressure_and_time_from_text_file(file, 20)
+            time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
+                 time_vector=time_vector, pressure_vector=pressure_vector,
+                 filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2,
+                 pressure_min=5, pressure_max=45)
+            mu = calculate_consumption_ratio(time_vector=time_vector_filtered,
+                                             pressure_vector=1e-2 * pressure_vector_filtered,
+                                             radius_of_barrel=3e-1, radius_of_hole=5e-3)
+            # write mu into log.txt
+            label = file.split('/')[-1].split('.')[0]
+            # write mu to the mu_dict
+            # first we write geometry name
+            mu_dict[geometry_name][label] = np.round(mu, 2)
+            print('#', sep='', end='')
+    # #         i += 1
+    with open('mu_values.json', 'w') as json_file:
+        json.dump(obj=mu_dict, fp=json_file, indent=4)
     finish_time = time.time()
-    print('\nfull time -> {0:.1f} seconds'.format(finish_time - start_time))
+    print('\naverage time = {0:.1f} ms'.format(1e3*(finish_time - start_time)))
+    # plt.figure(1)
+    # plt.rcParams.update({'font.size': 22})
+    # plt.plot(time_vector, pressure_vector, 'b', time_vector_filtered, pressure_vector_filtered, 'r')
+    # plt.ylabel('pressure, sm. H2O')
+    # plt.xlabel('time, sec')
+    # plt.grid()
+    # plt.show()
 
 
 class SignalProcessing:

@@ -1,155 +1,1922 @@
-5mm
-dmp : 646.6170360136091
-dmpJ : 632.0939169148563
-flt : 646.8222780644986
-fltJ : 632.8259856126701
-sph : 643.6662890965191
-sphJ : 645.5604623333851
-dmp : 645.221784551167
-dmpJ : 640.5205521416516
-flt : 644.0960937632298
-fltJ : 626.1123205181398
-sph : 642.2118210433921
-sphJ : 624.652139780488
-dmp : 615.2008469249087
-dmpJ : 604.0148976555146
-flt : 615.055538580165
-fltJ : 606.3309096290146
-sph : 612.8181667252003
-sphJ : 664.4892959952003
-dmp : 614.1570811900541
-dmpJ : 624.2784452703349
-flt : 614.3840523085507
-fltJ : 621.8666528086766
-sph : 614.4418657066584
-sphJ : 619.7355324848272
-dmp : 617.8985914709688
-dmpJ : 641.8853292050792
-flt : 617.2680300696538
-fltJ : 616.6616133293506
-sph : 618.1659747696898
-sphJ : 647.24540372987
-5mm
-dmp : 477.4379681515827
-dmpJ : 478.4503880894507
-flt : 475.45396165965064
-fltJ : 473.57123329707906
-sph : 475.6476212722175
-sphJ : 476.5952927777677
-dmp : 474.13612107415906
-dmpJ : 468.6704825817336
-flt : 475.09933367322526
-fltJ : 472.85830087581564
-sph : 471.6804696023184
-sphJ : 471.44694863193604
-dmp : 452.4727841291978
-dmpJ : 456.6972637329525
-flt : 452.2212274960771
-fltJ : 455.1387385636326
-sph : 450.25596843428366
-sphJ : 457.50064797598236
-dmp : 451.2913856283678
-dmpJ : 458.4284020490471
-flt : 452.573986571571
-fltJ : 453.62079674748
-sph : 451.56439334165407
-sphJ : 460.7796244098708
-dmp : 455.83273174140527
-dmpJ : 465.1495232690154
-flt : 453.64945236523386
-fltJ : 457.0579515109477
-sph : 454.51371098039135
-sphJ : 488.11408660683344
-5mm
-dmp : 646.6170360136091
-dmpJ : 632.0939169148563
-flt : 646.8222780644986
-fltJ : 632.8259856126701
-sph : 643.6662890965191
-sphJ : 645.5604623333851
-dmp : 645.221784551167
-dmpJ : 640.5205521416516
-flt : 644.0960937632298
-fltJ : 626.1123205181398
-sph : 642.2118210433921
-sphJ : 624.652139780488
-dmp : 615.2008469249087
-dmpJ : 604.0148976555146
-flt : 615.055538580165
-fltJ : 606.3309096290146
-sph : 612.8181667252003
-sphJ : 664.4892959952003
-dmp : 614.1570811900541
-dmpJ : 624.2784452703349
-flt : 614.3840523085507
-fltJ : 621.8666528086766
-sph : 614.4418657066584
-sphJ : 619.7355324848272
-dmp : 617.8985914709688
-dmpJ : 641.8853292050792
-flt : 617.2680300696538
-fltJ : 616.6616133293506
-sph : 618.1659747696898
-sphJ : 647.24540372987
-5mm
-dmp : 646.6170360136091
-dmpJ : 632.0939169148563
-flt : 646.8222780644986
-fltJ : 632.8259856126701
-sph : 643.6662890965191
-sphJ : 645.5604623333851
-dmp : 645.221784551167
-dmpJ : 640.5205521416516
-flt : 644.0960937632298
-fltJ : 626.1123205181398
-sph : 642.2118210433921
-sphJ : 624.652139780488
-dmp : 615.2008469249087
-dmpJ : 604.0148976555146
-flt : 615.055538580165
-fltJ : 606.3309096290146
-sph : 612.8181667252003
-sphJ : 664.4892959952003
-dmp : 614.1570811900541
-dmpJ : 624.2784452703349
-flt : 614.3840523085507
-fltJ : 621.8666528086766
-sph : 614.4418657066584
-sphJ : 619.7355324848272
-dmp : 617.8985914709688
-dmpJ : 641.8853292050792
-flt : 617.2680300696538
-fltJ : 616.6616133293506
-sph : 618.1659747696898
-sphJ : 647.24540372987
-5mm
-dmp : 646.6170360136091
-dmpJ : 632.0939169148563
-flt : 646.8222780644986
-fltJ : 632.8259856126701
-sph : 643.6662890965191
-sphJ : 645.5604623333851
-dmp : 645.221784551167
-dmpJ : 640.5205521416516
-flt : 644.0960937632298
-fltJ : 626.1123205181398
-sph : 642.2118210433921
-sphJ : 624.652139780488
-dmp : 615.2008469249087
-dmpJ : 604.0148976555146
-flt : 615.055538580165
-fltJ : 606.3309096290146
-sph : 612.8181667252003
-sphJ : 664.4892959952003
-dmp : 614.1570811900541
-dmpJ : 624.2784452703349
-flt : 614.3840523085507
-fltJ : 621.8666528086766
-sph : 614.4418657066584
-sphJ : 619.7355324848272
-dmp : 617.8985914709688
-dmpJ : 641.8853292050792
-flt : 617.2680300696538
-fltJ : 616.6616133293506
-sph : 618.1659747696898
-sphJ : 647.24540372987
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9452352119075728
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9242952432921945
+Data/Spiral/5mm
+r_3_flt -> mu=0.9467948207353452
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9302557819689338
+Data/Spiral/5mm
+r_3_sph -> mu=0.9458531808539496
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8728888907795403
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9452352119075728
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9242952432921945
+Data/Spiral/5mm
+r_3_flt -> mu=0.9467948207353452
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9302557819689338
+Data/Spiral/5mm
+r_3_sph -> mu=0.9458531808539496
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8728888907795403
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9452352119075728
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9242952432921945
+Data/Spiral/5mm
+r_3_flt -> mu=0.9467948207353452
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9302557819689338
+Data/Spiral/5mm
+r_3_sph -> mu=0.9458531808539496
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8728888907795403
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9452352119075728
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9242952432921945
+Data/Spiral/5mm
+r_3_flt -> mu=0.9467948207353452
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9302557819689338
+Data/Spiral/5mm
+r_3_sph -> mu=0.9458531808539496
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8728888907795403
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8464572062894886
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.84209487924833
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8442009790803482
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.8435753538220178
+Data/Spiral/8mm
+c_sh_sph -> mu=0.844992928648954
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8427809628361832
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.8448493827799228
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8457129534102661
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8453732747631496
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8400566974218542
+Data/Spiral/8mm
+c_sm_sph -> mu=0.8552193056607247
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8437273443643697
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9153315683643611
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8969750537429719
+Data/Spiral/8mm
+r_1_flt -> mu=0.9154547795661595
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.9001901052220432
+Data/Spiral/8mm
+r_1_sph -> mu=0.9127835071493468
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.879441087430808
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9735239712090854
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9450503053203235
+Data/Spiral/8mm
+r_2_flt -> mu=0.9738484247438989
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.9550854519119515
+Data/Spiral/8mm
+r_2_sph -> mu=0.9727988414196235
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9299035584391148
+Data/Spiral/8mm
+r_3_dmp -> mu=0.941633419444938
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.9257033261324826
+Data/Spiral/8mm
+r_3_flt -> mu=0.9472738762420011
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9307340071908718
+Data/Spiral/8mm
+r_3_sph -> mu=0.9455905986306515
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.9066495424632031
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8397837799746333
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8428389725900836
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8436363378110727
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.83812344934594
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8466218639823743
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8417220030815231
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8426145028088504
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8465228351677948
+Data/Spiral/5mm
+c_sm_flt -> mu=0.8423835163841698
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8412399637843424
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8449427981511612
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.8443547606672049
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9139003760388965
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.9075794633086302
+Data/Spiral/5mm
+r_1_flt -> mu=0.9170381393104872
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9115721504190102
+Data/Spiral/5mm
+r_1_sph -> mu=0.9188925043979798
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8999784409006832
+Data/Spiral/5mm
+r_2_dmp -> mu=0.973870268214204
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.9589061407371179
+Data/Spiral/5mm
+r_2_flt -> mu=0.9732076958561398
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9698212601303746
+Data/Spiral/5mm
+r_2_sph -> mu=0.9732662433381426
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9632236984590037
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9500066804364554
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9277106488985126
+Data/Spiral/5mm
+r_3_flt -> mu=0.9525689312876638
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9452524229466798
+Data/Spiral/5mm
+r_3_sph -> mu=0.9505118498120513
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8750613953750054
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8446985558717474
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8378451214559651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8427187068089173
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.8403461648924606
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8415633271094988
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8402277896862297
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.8425034505686122
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8433641870316907
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8418766007484547
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8406051320022476
+Data/Spiral/8mm
+c_sm_sph -> mu=0.7679444983473976
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8445201841486759
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9118518049991099
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8845214350043757
+Data/Spiral/8mm
+r_1_flt -> mu=0.9085920265164706
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8860421016889836
+Data/Spiral/8mm
+r_1_sph -> mu=0.9073359186267734
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8669893549638076
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9682655118711301
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9279934525171544
+Data/Spiral/8mm
+r_2_flt -> mu=0.9697773595560416
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.9345416825323745
+Data/Spiral/8mm
+r_2_sph -> mu=0.9688781775151878
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9122696517309601
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9365523258290889
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.8982800862874709
+Data/Spiral/8mm
+r_3_flt -> mu=0.9401679906010263
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9118647577328574
+Data/Spiral/8mm
+r_3_sph -> mu=0.9394492711111158
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8785806238215115
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8368856067977705
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8413428355635789
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8402830476682657
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8390447861028076
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8439807526157365
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8410684392206008
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8390104652131339
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8437926020857572
+Data/Spiral/5mm
+c_sm_flt -> mu=0.8394003943189722
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8383132245509631
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8419978399530208
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.8446201757812372
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9090784850860917
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8979921395646417
+Data/Spiral/5mm
+r_1_flt -> mu=0.9099828741236712
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9042783934235941
+Data/Spiral/5mm
+r_1_sph -> mu=0.9116432548759105
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.89238691290794
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9673174339546758
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.9522055014516353
+Data/Spiral/5mm
+r_2_flt -> mu=0.9670353990817907
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9559117156210098
+Data/Spiral/5mm
+r_2_sph -> mu=0.9677051475903634
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9486458098550966
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9440308972545033
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.925468700619373
+Data/Spiral/5mm
+r_3_flt -> mu=0.9451092009780294
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9314235678256209
+Data/Spiral/5mm
+r_3_sph -> mu=0.944296463249076
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8734969120731446
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9452352119075728
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9242952432921945
+Data/Spiral/5mm
+r_3_flt -> mu=0.9467948207353452
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9302557819689338
+Data/Spiral/5mm
+r_3_sph -> mu=0.9458531808539496
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8728888907795403
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8445476560985641
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8405850569339612
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8426559682817774
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.8420003972383905
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8434460068298834
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8425229986627865
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.8437037299160632
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8441772489999694
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8445049619184146
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8371220416224108
+Data/Spiral/8mm
+c_sm_sph -> mu=0.8533838156466592
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8430546178946332
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9136239964957886
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8933817025444252
+Data/Spiral/8mm
+r_1_flt -> mu=0.9140656347363264
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8980549319607642
+Data/Spiral/8mm
+r_1_sph -> mu=0.910716122746848
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8731037133333535
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9707801808148896
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9395463731136847
+Data/Spiral/8mm
+r_2_flt -> mu=0.9718784846903977
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.9517777011334199
+Data/Spiral/8mm
+r_2_sph -> mu=0.9704630681592458
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9220733850571401
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9401357506538237
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.9224706149173033
+Data/Spiral/8mm
+r_3_flt -> mu=0.9454992997771259
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9265502072126999
+Data/Spiral/8mm
+r_3_sph -> mu=0.9435532258578776
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8985124470386144
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8392076929789998
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8435075228251878
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8421947039700548
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8385034512318174
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8454492631435102
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8398293620628816
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8415530626458653
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8453453521221834
+Data/Spiral/5mm
+c_sm_flt -> mu=0.8411427305955421
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8388730610964015
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8437672602059424
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.8435442879935889
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9124747706553923
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.9049114991248925
+Data/Spiral/5mm
+r_1_flt -> mu=0.9155694892405801
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9094526066426748
+Data/Spiral/5mm
+r_1_sph -> mu=0.9170981559462716
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.896175126920093
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9725223113525423
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.954988795279644
+Data/Spiral/5mm
+r_2_flt -> mu=0.9717348654910862
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.967013144577229
+Data/Spiral/5mm
+r_2_sph -> mu=0.9714080382948067
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9616009802355379
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9477278270632212
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9265971362118307
+Data/Spiral/5mm
+r_3_flt -> mu=0.9509159321163433
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9439740122313629
+Data/Spiral/5mm
+r_3_sph -> mu=0.9484132103962535
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8741417442631353
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.9378750280637743
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.894514447766671
+Data/Spiral/8mm
+r_3_flt -> mu=0.9428871420879441
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.9089940279495239
+Data/Spiral/8mm
+r_3_sph -> mu=0.9399030578278849
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8744258626162861
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.9452352119075728
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.9242952432921945
+Data/Spiral/5mm
+r_3_flt -> mu=0.9467948207353452
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.9302557819689338
+Data/Spiral/5mm
+r_3_sph -> mu=0.9458531808539496
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8728888907795403
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.8909436788373406
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.8497528658073995
+Data/Spiral/8mm
+r_3_flt -> mu=0.8957049862331282
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.863507886519236
+Data/Spiral/8mm
+r_3_sph -> mu=0.8928702258129608
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8306695152319298
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.897935558431627
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.8780434276949356
+Data/Spiral/5mm
+r_3_flt -> mu=0.8994171242959319
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.8837057004899267
+Data/Spiral/5mm
+r_3_sph -> mu=0.8985226041573581
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8292094536016191
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.8909436788373406
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.8497528658073995
+Data/Spiral/8mm
+r_3_flt -> mu=0.8957049862331282
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.863507886519236
+Data/Spiral/8mm
+r_3_sph -> mu=0.8928702258129608
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8306695152319298
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.897935558431627
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.8780434276949356
+Data/Spiral/5mm
+r_3_flt -> mu=0.8994171242959319
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.8837057004899267
+Data/Spiral/5mm
+r_3_sph -> mu=0.8985226041573581
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8292094536016191
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8447083226734224
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8360713946194651
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8422862080707095
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.839366253162978
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8417194465446217
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8393904676807011
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.841864181225041
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8423926845269101
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8420748706510048
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8393116095684137
+Data/Spiral/8mm
+c_sm_sph -> mu=0.761106243005745
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8436956657114129
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9125035111318336
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8823416582647935
+Data/Spiral/8mm
+r_1_flt -> mu=0.9095070035658289
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8834401504477457
+Data/Spiral/8mm
+r_1_sph -> mu=0.9084155060635266
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8640623915222263
+Data/Spiral/8mm
+r_2_dmp -> mu=0.9678094205480353
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.9254762031954675
+Data/Spiral/8mm
+r_2_flt -> mu=0.9683485412665657
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.931632379667442
+Data/Spiral/8mm
+r_2_sph -> mu=0.9675405220684647
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.9080312885198689
+Data/Spiral/8mm
+r_3_dmp -> mu=0.8909436788373406
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.8497528658073995
+Data/Spiral/8mm
+r_3_flt -> mu=0.8957049862331282
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.863507886519236
+Data/Spiral/8mm
+r_3_sph -> mu=0.8928702258129608
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8306695152319298
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.8379064253820582
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8414565774359501
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8409282174995933
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8389300305674819
+Data/Spiral/5mm
+c_sh_sph -> mu=0.8437600844559235
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8406599864093696
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8398333539003704
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8433269622401003
+Data/Spiral/5mm
+c_sm_flt -> mu=0.839785901252954
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8370103821100802
+Data/Spiral/5mm
+c_sm_sph -> mu=0.8422136782108619
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.844065882463844
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9097817713942892
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8964492377743913
+Data/Spiral/5mm
+r_1_flt -> mu=0.913063265919042
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.9034251389403911
+Data/Spiral/5mm
+r_1_sph -> mu=0.9135719916200096
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8899551112254153
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9685478746602335
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.950949783734833
+Data/Spiral/5mm
+r_2_flt -> mu=0.9683052880612197
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.9600321620283232
+Data/Spiral/5mm
+r_2_sph -> mu=0.9693776279883362
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.9471245922101156
+Data/Spiral/5mm
+r_3_dmp -> mu=0.897935558431627
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.8780434276949356
+Data/Spiral/5mm
+r_3_flt -> mu=0.8994171242959319
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.8837057004899267
+Data/Spiral/5mm
+r_3_sph -> mu=0.8985226041573581
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8292094536016191
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.8643020855243414
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.8554648162218048
+Data/Spiral/8mm
+c_sh_flt -> mu=0.8618237878133908
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.8588361019475738
+Data/Spiral/8mm
+c_sh_sph -> mu=0.8612438797482688
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.8588608781426316
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.8633120909854589
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.8638540588002283
+Data/Spiral/8mm
+c_sm_flt -> mu=0.8635281480798653
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.8606944882611508
+Data/Spiral/8mm
+c_sm_sph -> mu=0.7804967080975423
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.8651902356277904
+Data/Spiral/8mm
+r_1_dmp -> mu=0.9054274058156274
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.8754994462375659
+Data/Spiral/8mm
+r_1_flt -> mu=0.9024541349855505
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.8765894200463037
+Data/Spiral/8mm
+r_1_sph -> mu=0.9013711016164624
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.8573619280088322
+Data/Spiral/8mm
+r_2_dmp -> mu=0.903984422988741
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.8644429923628126
+Data/Spiral/8mm
+r_2_flt -> mu=0.9044879898287743
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.8701931819328673
+Data/Spiral/8mm
+r_2_sph -> mu=0.9037332577988412
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.8481485331518493
+Data/Spiral/8mm
+r_3_dmp -> mu=0.8909436788373406
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.8497528658073995
+Data/Spiral/8mm
+r_3_flt -> mu=0.8957049862331282
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.863507886519236
+Data/Spiral/8mm
+r_3_sph -> mu=0.8928702258129608
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.8306695152319298
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.857342412159408
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.8609749131561998
+Data/Spiral/5mm
+c_sh_flt -> mu=0.8604342974399275
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.8583897607799552
+Data/Spiral/5mm
+c_sh_sph -> mu=0.863331852075755
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.8601598444903591
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.8612295249098483
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.8648121388137526
+Data/Spiral/5mm
+c_sm_flt -> mu=0.8611808633262167
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.8583346331524608
+Data/Spiral/5mm
+c_sm_sph -> mu=0.863670491996396
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.8655698842763334
+Data/Spiral/5mm
+r_1_dmp -> mu=0.9027267720977225
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.8894976270246899
+Data/Spiral/5mm
+r_1_flt -> mu=0.9059828199249359
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.8964194328247839
+Data/Spiral/5mm
+r_1_sph -> mu=0.9064876006584695
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.8830538598692268
+Data/Spiral/5mm
+r_2_dmp -> mu=0.9046741776040046
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.888236643795031
+Data/Spiral/5mm
+r_2_flt -> mu=0.9044475890814319
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.8967200583255038
+Data/Spiral/5mm
+r_2_sph -> mu=0.9054492104437372
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.8846637156132267
+Data/Spiral/5mm
+r_3_dmp -> mu=0.897935558431627
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.8780434276949356
+Data/Spiral/5mm
+r_3_flt -> mu=0.8994171242959319
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.8837057004899267
+Data/Spiral/5mm
+r_3_sph -> mu=0.8985226041573581
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.8292094536016191
+Data/Spiral/8mm
+c_sh_dmp -> mu=0.86
+Data/Spiral/8mm
+c_sh_dmpJ -> mu=0.86
+Data/Spiral/8mm
+c_sh_flt -> mu=0.86
+Data/Spiral/8mm
+c_sh_fltJ -> mu=0.86
+Data/Spiral/8mm
+c_sh_sph -> mu=0.86
+Data/Spiral/8mm
+c_sh_sphJ -> mu=0.86
+Data/Spiral/8mm
+c_sm_dmp -> mu=0.86
+Data/Spiral/8mm
+c_sm_dmpJ -> mu=0.86
+Data/Spiral/8mm
+c_sm_flt -> mu=0.86
+Data/Spiral/8mm
+c_sm_fltJ -> mu=0.86
+Data/Spiral/8mm
+c_sm_sph -> mu=0.78
+Data/Spiral/8mm
+c_sm_sphJ -> mu=0.87
+Data/Spiral/8mm
+r_1_dmp -> mu=0.91
+Data/Spiral/8mm
+r_1_dmpJ -> mu=0.88
+Data/Spiral/8mm
+r_1_flt -> mu=0.90
+Data/Spiral/8mm
+r_1_fltJ -> mu=0.88
+Data/Spiral/8mm
+r_1_sph -> mu=0.90
+Data/Spiral/8mm
+r_1_sphJ -> mu=0.86
+Data/Spiral/8mm
+r_2_dmp -> mu=0.90
+Data/Spiral/8mm
+r_2_dmpJ -> mu=0.86
+Data/Spiral/8mm
+r_2_flt -> mu=0.90
+Data/Spiral/8mm
+r_2_fltJ -> mu=0.87
+Data/Spiral/8mm
+r_2_sph -> mu=0.90
+Data/Spiral/8mm
+r_2_sphJ -> mu=0.85
+Data/Spiral/8mm
+r_3_dmp -> mu=0.89
+Data/Spiral/8mm
+r_3_dmpJ -> mu=0.85
+Data/Spiral/8mm
+r_3_flt -> mu=0.90
+Data/Spiral/8mm
+r_3_fltJ -> mu=0.86
+Data/Spiral/8mm
+r_3_sph -> mu=0.89
+Data/Spiral/8mm
+r_3_sphJ -> mu=0.83
+Data/Spiral/5mm
+c_sh_dmp -> mu=0.86
+Data/Spiral/5mm
+c_sh_dmpJ -> mu=0.86
+Data/Spiral/5mm
+c_sh_flt -> mu=0.86
+Data/Spiral/5mm
+c_sh_fltJ -> mu=0.86
+Data/Spiral/5mm
+c_sh_sph -> mu=0.86
+Data/Spiral/5mm
+c_sh_sphJ -> mu=0.86
+Data/Spiral/5mm
+c_sm_dmp -> mu=0.86
+Data/Spiral/5mm
+c_sm_dmpJ -> mu=0.86
+Data/Spiral/5mm
+c_sm_flt -> mu=0.86
+Data/Spiral/5mm
+c_sm_fltJ -> mu=0.86
+Data/Spiral/5mm
+c_sm_sph -> mu=0.86
+Data/Spiral/5mm
+c_sm_sphJ -> mu=0.87
+Data/Spiral/5mm
+r_1_dmp -> mu=0.90
+Data/Spiral/5mm
+r_1_dmpJ -> mu=0.89
+Data/Spiral/5mm
+r_1_flt -> mu=0.91
+Data/Spiral/5mm
+r_1_fltJ -> mu=0.90
+Data/Spiral/5mm
+r_1_sph -> mu=0.91
+Data/Spiral/5mm
+r_1_sphJ -> mu=0.88
+Data/Spiral/5mm
+r_2_dmp -> mu=0.90
+Data/Spiral/5mm
+r_2_dmpJ -> mu=0.89
+Data/Spiral/5mm
+r_2_flt -> mu=0.90
+Data/Spiral/5mm
+r_2_fltJ -> mu=0.90
+Data/Spiral/5mm
+r_2_sph -> mu=0.91
+Data/Spiral/5mm
+r_2_sphJ -> mu=0.88
+Data/Spiral/5mm
+r_3_dmp -> mu=0.90
+Data/Spiral/5mm
+r_3_dmpJ -> mu=0.88
+Data/Spiral/5mm
+r_3_flt -> mu=0.90
+Data/Spiral/5mm
+r_3_fltJ -> mu=0.88
+Data/Spiral/5mm
+r_3_sph -> mu=0.90
+Data/Spiral/5mm
+r_3_sphJ -> mu=0.83
