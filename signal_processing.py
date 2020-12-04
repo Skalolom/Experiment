@@ -16,11 +16,12 @@ MINIMUM_ATTENUATION_IN_STOP_BAND = 40
 FACTOR_PRESSURE_TO_WINDOW = 500
 
 
-def get_text_files_from_directory(directory_path: str) -> list:
+def get_text_files_from_directory(directory_path: str, no_jet=False) -> list:
     """
     This function returns list of text files in directory 'path'
 
     :param directory_path path to directory
+    :param no_jet: true, when we dont need data from jet streams
 
     :return text_files list of text files in directory_path
 
@@ -29,6 +30,8 @@ def get_text_files_from_directory(directory_path: str) -> list:
     text_files = []
     for root, directory, files in os.walk(directory_path):
         for file in files:
+            if no_jet and 'J' in file:
+                continue
             text_files.append(os.path.join(root, file))
     text_files.sort()
 
@@ -64,7 +67,7 @@ def get_pressure_and_time_from_text_file(text_file_path, number_of_info_rows):
     :return: data_from_file (pressure_vector, time_vector) - tuple of time and pressure vectors
 
     """
-
+    
     # here we read text file from 21th row (where information part ends). Then we call columns 't' for time samples
     # and 'p' for pressure samples respectively. Finally, we write vectors of time and pressure to np.ndarrays.
     with open(text_file_path, 'r') as text_file:
@@ -98,6 +101,8 @@ def get_pressure_and_time_from_text_file(text_file_path, number_of_info_rows):
 
     k = r_current ** 2 / r_0 ** 2
     time_vector = k*time_vector
+
+    pressure_vector = 1e-2*pressure_vector
 
     return time_vector, pressure_vector
 
@@ -277,11 +282,12 @@ def approximate_pressure_with_polynomial(time_vector, pressure_vector, filter_wi
     return time_vector_filtered, pressure_vector_filtered
 
 
-def calculate_consumption_ratio(time_vector, pressure_vector, radius_of_barrel, radius_of_hole):
+def calculate_consumption(time_vector, pressure_vector, radius_of_barrel, radius_of_hole):
     """
 
     that function evaluates consumption ration mu for emptying the barrel with constant radius (radius_of_barrel)
-    through the hole with radius = radius_of_hole
+    through the hole with radius = radius_of_hole and calculate vector of consumption values according to pressure
+    vector
 
     :param time_vector: vector of timestamps
     :param pressure_vector: vector of liquid height values
@@ -303,13 +309,23 @@ def calculate_consumption_ratio(time_vector, pressure_vector, radius_of_barrel, 
     time_ideal = (2*s_barrel*(np.sqrt(h1+h_c) - np.sqrt(h2+h_c)))/(s_hole*np.sqrt(2*9.8))
     mu = (2*s_barrel*(np.sqrt(h1+h_c) - np.sqrt(h2+h_c)))/(time_experimental*s_hole*np.sqrt(2*9.8))
 
-    return mu
+    # now we calculate consumption according to expression Q = S*(dh/dt)
+    dh = np.abs(np.diff(pressure_vector))
+    dt = np.abs(np.diff(time_vector))
+    dh = np.append(dh, dh[-1])
+    dt = np.append(dt, dt[-1])
+    consumption_vector = s_barrel * (dh/dt)
+
+    return mu, consumption_vector
 
 
 def test_function():
-    i = 0
+    i = 1
     start_time = time.time()
     mu_dict = {}
+    pressure_vector_filtered = np.array([])
+    consumption_vector = np.array([])
+    color = 'black'
     # time_vector, pressure_vector = get_pressure_and_time_from_text_file(r'Data/Spiral/5mm/c_sh_flt.txt', 20)
     # time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
     #     time_vector=time_vector, pressure_vector=pressure_vector,
@@ -318,28 +334,45 @@ def test_function():
     # mu = calculate_consumption_ratio(time_vector=time_vector_filtered, pressure_vector=1e-2*pressure_vector_filtered,
     #                                  radius_of_barrel=3e-1, radius_of_hole=5e-3)
     for directory in get_directories_from_root(r'Data/Spiral'):
+        plt.figure(i)
         geometry_name = directory.split('/')[-1]
         mu_dict[geometry_name] = {}
-        for file in get_text_files_from_directory(directory):
+        for file in get_text_files_from_directory(directory, no_jet=True):
             time_vector, pressure_vector = get_pressure_and_time_from_text_file(file, 20)
             time_vector_filtered, pressure_vector_filtered = approximate_pressure_with_polynomial(
                  time_vector=time_vector, pressure_vector=pressure_vector,
                  filter_window_factor=FACTOR_PRESSURE_TO_WINDOW, polynomial_degree=2,
-                 pressure_min=5, pressure_max=45)
-            mu = calculate_consumption_ratio(time_vector=time_vector_filtered,
-                                             pressure_vector=1e-2 * pressure_vector_filtered,
-                                             radius_of_barrel=3e-1, radius_of_hole=5e-3)
+                 pressure_min=0.05, pressure_max=0.45)
+            mu, consumption_vector = calculate_consumption(time_vector=time_vector_filtered,
+                                                           pressure_vector=pressure_vector_filtered,
+                                                           radius_of_barrel=3e-1, radius_of_hole=5e-3)
             # write mu into log.txt
             label = file.split('/')[-1].split('.')[0]
             # write mu to the mu_dict
             # first we write geometry name
             mu_dict[geometry_name][label] = np.round(mu, 2)
             print('#', sep='', end='')
-    # #         i += 1
+
+            if 'r_1' in file:
+                color = 'blue'
+            if 'r_2' in file:
+                color = 'green'
+            if 'r_3' in file:
+                color = 'red'
+            plt.plot(pressure_vector_filtered, 1e3 * consumption_vector, label=label, color=color)
+            plt.title(geometry_name)
+            plt.xlabel('pressure, m h2o')
+            plt.ylabel('consumption, l/sec')
+        i += 1
+        plt.legend(loc='upper right')
+        plt.grid()
+        plt.show()
+        color = 'black'
     with open('mu_values.json', 'w') as json_file:
         json.dump(obj=mu_dict, fp=json_file, indent=4)
     finish_time = time.time()
     print('\naverage time = {0:.1f} ms'.format(1e3*(finish_time - start_time)))
+
     # plt.figure(1)
     # plt.rcParams.update({'font.size': 22})
     # plt.plot(time_vector, pressure_vector, 'b', time_vector_filtered, pressure_vector_filtered, 'r')

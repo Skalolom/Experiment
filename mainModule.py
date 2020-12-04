@@ -135,7 +135,7 @@ for filename in files:
     dt, dh = np.abs(np.diff(time_vector_flt)), np.abs(np.diff(press_vector_flt))
     dt = np.append(dt, dt[-1])
     dh = np.append(dh, dh[-1])
-    consumption = (np.pi*(10e-2*r_current)**2) * (dh/dt)
+    consumption = (np.pi*(10e-2*3e-1)**2) * (dh/dt)
 
     # write expTime and name of the graph
     bars.append(expTime)
